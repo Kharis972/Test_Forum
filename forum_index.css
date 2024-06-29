@@ -5,7 +5,24 @@ body {
     font-size: 20px;
 }
 
+nav.main-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
 
+.binks_logo{
+    width: 10px;
+    height: 10px;
+}
+
+a {
+    color: white;
+    display: flex;
+    text-decoration: none;
+    gap: 2rem;
+}
 
 .in{
     position: relative;
@@ -15,27 +32,22 @@ body {
     font-size: large;
 }
 
-.text{
-    position: absolute;
-}
-
 .intro{
     color: white;
     text-align: center;
-}
-
-a{
-    color: white;
-    display: flex;
-    text-decoration: none;
-    justify-content: center;
 }
 
 .color1{
     color: white;
 }
 .container1{
+    display: flex;
     justify-content: center;
+}
+
+.welcome{
+    justify-self: auto;
+    
 }
 
 .forum {
@@ -61,17 +73,17 @@ input[type="text"] {
     flex: 1;
     padding: 10px;
     border: 1px solid #ddd;
-    border-radius: 5px 0 0 5px;
+    border-radius: 5px 5px 5px 5px;
 }
 
 button {
-    padding: 10px;
+    padding: 20px;
     border: 2px solid black;
-    border-left: none;
     background-color: #106e9d;
     color: white;
     border-radius: 5px 5px 5px 5px;
     cursor: pointer;
+    font-size: 1.1rem;
 }
 
 button:hover {
