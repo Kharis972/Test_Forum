@@ -1,11 +1,10 @@
-
-* {
+*{
     margin: 0px;
     padding: 0px;
-}
+} 
 
 body {
-    background-image: url(jedi-page.jpg);
+    background-image: url(img/jedi-page.jpg);
     background-repeat: no-repeat;
     height: inherit;
     font-size: 20px;

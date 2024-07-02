@@ -1,5 +1,5 @@
 body {
-    background-image: url(star-wars-digital-art-jp.jpg);
+    background-image: url(img/star-wars-digital-art-jp.jpg);
     background-repeat: no-repeat;
     height: inherit;
     font-size: 20px;
@@ -14,7 +14,7 @@ nav.main-menu {
 }
 
 .binks_logo{
-    width: 10px;
+    width: 100px;
     height: 10px;
 }
 
@@ -41,12 +41,11 @@ a {
 .color1{
     color: white;
 }
+
 .container1{
     display: flex;
     justify-content: space-between;
 }
-
-
 
 .welcome{
     justify-self: auto;    
@@ -92,3 +91,11 @@ button:hover {
     background-color: #0aa284;
     transition: 2s;
 } 
+
+.footer_logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+}
