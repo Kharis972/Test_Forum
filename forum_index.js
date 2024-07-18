@@ -1,4 +1,7 @@
 // script.js
+
+const disappear = document.querySelector(".disappearText");
+const forum = document.querySelector(".forum");
 document.addEventListener('DOMContentLoaded', () => {
     const messageForm = document.getElementById('messageForm');
     const messageInput = document.getElementById('messageInput');
@@ -52,3 +55,9 @@ document.addEventListener('DOMContentLoaded', () => {
         messagesDiv.scrollTop = messagesDiv.scrollHeight;
     }
 });
+
+function disappearText() {
+    disappear.classList.toggle("invisible");
+}
+
+forum.addEventListener("onclick", disappearText());
