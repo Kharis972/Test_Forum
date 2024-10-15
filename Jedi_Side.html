@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,60 +10,157 @@
     <link rel="stylesheet" href="Jedi_Side.css">
     <title>Jedi Side</title>
 </head>
+
 <body>
     <header>
-        <div class="binks_logo"><img src="img/Binks_forum_Log_Resized.png" alt=""></div>
-        <nav class="main-menu" role="navigation" aria-label="Menu principal">
-            
-                <ul>
-                    <li class="deroulant"><a href="#">Menu &ensp;</a>
-                        <ul class="sous">
-                            <li><a href="#">History of the Jedi Order</a></li>
-                            <li><a href="#">Alliances</a></li>
-                            <li><a href="#">The ways of the Force</a></li>
-                        </ul>
-                    </li>
-                    <li class="deroulant"><a href="#">News &ensp;</a>
-                        <ul class="sous">
-                            <li><a href="#">SWTOR</a></li>
-                            <li><a href="#">BATTLEFRONT</a></li>
-                            <li><a href="#">TRICKS</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="forum_index.html">About Us</a></li>
-                </ul>                  
+        <div class="binks_logo">
+            <a href="forum_index.html"><img src="includes/forum-image/Binks_forum_Log_Resized.png" alt="Binks Forum Logo" role="img"></a>
+        </div>
+        <nav class="main-menu" role="navigation" aria-label="Main Menu">
+            <ul>
+                <li class="deroulant"><a href="#">Menu &ensp;</a>
+                    <ul class="sous">
+                        <li><a href="Jedi_History.html">History of the Jedi Order</a></li>
+                        <li><a href="#">Alliances</a></li>
+                        <li><a href="#">The ways of the Force</a></li>
+                    </ul>
+                </li>
+                <li class="deroulant"><a href="#">News &ensp;</a>
+                    <ul class="sous">
+                        <li><a href="#">SWTOR</a></li>
+                        <li><a href="#">BATTLEFRONT</a></li>
+                        <li><a href="#">TRICKS</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
         </nav>
     </header>
 
-    <section class="Jedi_oath">
-        <div class="Jedi_oath1">
-            <p class="Jedi_oath1">
-            Dear friends, before you start your path, you must take an oath !<br> 
-            You must keep your oath ! 
-            </p>
-            
-            <hr>
-            
-            <p class="Jedi_oath1">
-                There, repeat it out loud:
-                I profess before all my fellow Jedi that I, [name], without reservation,
-                choose the Jedi path with all its duties and responsibilities.<br>
-                I promise to uphold the Jedi teachings, and to live a life worthy of a Jedi.
-            </p>
+    <!-- Button to open the pop-up -->
+    <button class="jedi-oath-btn" id="jediOathButton" aria-haspopup="dialog" aria-controls="oathPopup">Jedi
+        Oath</button>
 
-            <hr>
-
-            <p class="Jedi_oath1">
-                Then, this our code that you must know too:<br>
-                There is no emotion, there is peace.<br>
-                There is no ignorance, there is knowledge.<br>
-                There is no passion, there is serenity.<br>
-                There is no chaos, there is harmony.<br>
-                There is no death, there is the Force.
-            </p>
+    <!-- Pop-up for the Jedi Oath -->
+    <div class="popup" id="oathPopup" role="dialog" aria-labelledby="namePrompt" aria-hidden="true">
+        <div class="popup-content">
+            <button class="close-btn" id="closeOathPopup" aria-label="Close Oath Popup">&times;</button>
+            <div class="Jedi_oath">
+                <div class="Jedi_oath1">
+                    <p id="namePrompt">Please enter your name to proceed:</p>
+                    <!-- Input for user's name -->
+                    <div>
+                        <input type="text" id="nameInput" class="name-input" placeholder="Enter your name"
+                            aria-required="true" />
+                        <button class="submit-btn" id="submitNameButton">Submit</button>
+                    </div>
+                    <div id="oathContainer" style="display: none;">
+                        <hr>
+                        <p>
+                            Dear friends, before you start your path, you must take an oath!<br>
+                            You must keep your oath!
+                        </p>
+                        <hr>
+                        <p id="oathText">
+                            There, repeat it out loud: I profess before all my fellow Jedi that
+                            I, <span id="userName">[name]</span>, without reservation, choose the Jedi path with all its
+                            duties and responsibilities.<br> I promise to uphold the Jedi
+                            teachings, and to live a life worthy of a Jedi.
+                        </p>
+                        <hr>
+                        <div class="popup-content">
+                            <button class="close-btn" id="closeCodePopup" aria-label="Close Code Popup">&times;</button>
+                            <div class="Jedi_code">
+                                <button class="show-btn" id="showCode" aria-label="Show Jedi Code">Show</button>
+                                <p id="jediCode" aria-live="polite">
+                                    Then, this is our code that you must know too:<br> There is no
+                                    emotion, there is peace.<br> There is no ignorance, there is
+                                    knowledge.<br> There is no passion, there is serenity.<br>
+                                    There is no chaos, there is harmony.<br> There is no death,
+                                    there is the Force.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
+
+    <!-- Section with links -->
+    <section>
+        <p><strong>Here are the news from:</strong></p>
+        <p><a href="#">Coruscant</a></p>
+        <p><a href="#">Nar Shaddaa</a></p>
+        <p><a href="#">Yavin 4</a></p>
     </section>
-    
+
+    <script>
+        // JavaScript to handle pop-up behavior
+        document.addEventListener("DOMContentLoaded", function () {
+            var oathPopup = document.querySelector("#oathPopup");
+            var jediOathButton = document.getElementById("jediOathButton");
+            var closeOathPopup = document.getElementById("closeOathPopup");
+            var closeCodePopup = document.getElementById("closeCodePopup");
+            var nameInput = document.getElementById("nameInput");
+            var userNameSpan = document.getElementById("userName");
+            var submitNameButton = document.getElementById("submitNameButton");
+            var oathContainer = document.getElementById("oathContainer");
+            var namePrompt = document.getElementById("namePrompt");
+            var showCodeButton = document.getElementById("showCode");
+            var jediCode = document.getElementById("jediCode");
+
+            // Open the pop-up when the button is clicked
+            jediOathButton.addEventListener("click", function () {
+                oathPopup.style.display = "block";
+                nameInput.value = ""; // Clear input on open
+                userNameSpan.textContent = "[name]"; // Reset name placeholder
+                oathContainer.style.display = "none"; // Hide the oath initially
+                jediCode.style.display = "none"; // Hide the Jedi code initially
+            });
+
+            // Close the pop-up for the Jedi Oath
+            closeOathPopup.addEventListener("click", function () {
+                oathPopup.style.display = "none";
+            });
+
+            // Close the pop-up for the Jedi Code
+            closeCodePopup.addEventListener("click", function () {
+                codePopup.style.display = "none";
+            });
+
+            // Close the pop-up if the user clicks outside the box
+            window.addEventListener("click", function (e) {
+                if (e.target === oathPopup) {
+                    oathPopup.style.display = "none";
+                }
+            });
+
+            // Show the oath text with the user's name without closing the popup
+            submitNameButton.addEventListener("click", function () {
+                var nameValue = nameInput.value.trim();
+                if (nameValue) {
+                    userNameSpan.textContent = nameValue; // Update the name in the oath text
+                    namePrompt.style.display = "none"; // Hide the name input prompt
+                    oathContainer.style.display = "block"; // Show the oath container
+                } else {
+                    alert("Please enter your name."); // Alert if the input is empty
+                }
+            });
+
+            // Show the Jedi code when the button is clicked
+            showCodeButton.addEventListener("click", function () {
+                jediCode.style.display = jediCode.style.display === "none" ? "block" : "none";
+            });
+        });
+    </script>
+
+    <footer class="end_page">
+        <a href="Jedi_Side.html"><img src="img/logo-jedi-transparent.png" alt="" class="footer_logo"></a>
+        <a href="Sith-Side.html"><img src="img/Logo.empire--transparent.png" alt="" class="footer_logo"></a>
+        <a href=""><img src="img/logo-sénat-galactique-transparent.png" alt="" class="footer_logo"></a>
+    </footer>
 </body>
+
 </html>

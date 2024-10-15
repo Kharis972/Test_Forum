@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="aboutUs.css">
+    <title>Document</title>
+</head>
+<body>
+    <header role="banner">
+        <nav class="main-menu" role="navigation" aria-label="Menu principal">
+            <div class="cta">
+    
+                <!-- Icône du menu burger -->
+                <button class="burger-menu" onclick="toggleMenu()">☰</button>
+    
+                <ul class="menu-items">
+                    <li><a href="Jedi_History.html">History of the Jedi Order</a></li>
+                    <li><a href="#">Alliances</a></li>
+                    <li><a href="#">The ways of the Force</a></li>
+                    <li><a href="#">SWTOR</a></li>
+                    <li><a href="#">BATTLEFRONT</a></li>
+                    <li><a href="#">TRICKS</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="binks_logo"><img src="img/LogoSample_ByTailorBrands_no_bg.png" alt=""></div>
+            <div class="cta1">
+                <a href="#" class="user-account"><button>Create an account</button></a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="fade"></div>
+    
+    <section class="star-wars">
+        <div class="crawl">
+            <div class="title">
+                <p>Binks Forum</p>
+                <h1>A New Hope</h1>
+            </div>
+    
+            <p>It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory
+                against the evil Galactic Empire.</p>
+    
+            <p>During the battle, Rebel spies managed to steal secret plans to the Empire’s ultimate weapon, the DEATH STAR,
+                an armored space station with enough power to destroy an entire planet.</p>
+    
+            <p>Pursued by the Empire’s sinister agents, Princess Leia races home aboard her starship, custodian of the
+                stolen plans that can save her people and restore freedom to the galaxy….</p>
+
+            <p>From the beginning of this journey, we've been looking for acolytes to help reach our goals, to be the greatest fans page of Star Wars, 
+                with our dedications, and our point of view we'll show to those younglings the way of the force, we'll prevail against the sith !
+                We'll show'em how it goes !
+
+            </p>
+        </div>
+    </section>
+
+    <script>
+
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('menu-open');
+        }
+
+
+    </script>
+
+    <footer class="end_page">
+        <a href="Jedi_Side.html"><img src="img/logo-jedi-transparent.png" alt="" class="footer_logo"></a>
+        <a href="Sith-Side.html"><img src="img/Logo.empire--transparent.png" alt="" class="footer_logo"></a>
+        <a href=""><img src="img/logo-sénat-galactique-transparent.png" alt="" class="footer_logo"></a>
+    </footer>
+
+</body>
+</html>

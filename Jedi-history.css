@@ -1,0 +1,129 @@
+/* Style global */
+body {
+    background-color: #0a0a0a;
+    color: #e0e0e0;
+    font-family: "Zen Dots", sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Logo */
+.binks_logo img {
+    height: 80px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Menu principal */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    background: linear-gradient(90deg, #0d0d0d, #1a1a1a);
+    padding: 20px 0;
+    border-radius: 10px;
+}
+
+nav ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+nav ul li a {
+    color: #00fff0;
+    font-size: 1.2rem;
+    text-decoration: none;
+    text-shadow: 0 0 5px rgba(0, 255, 240, 0.6);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00bfa6;
+    text-shadow: 0 0 10px rgba(0, 255, 240, 0.9);
+}
+
+/* Sous-menu déroulant */
+nav ul li ul.sous {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: #1a1a1a;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+nav ul li:hover ul.sous {
+    display: block;
+}
+
+nav ul li ul.sous li a {
+    display: block;
+    padding: 10px;
+    color: #e0e0e0;
+    text-shadow: none;
+}
+
+nav ul li ul.sous li a:hover {
+    color: #00fff0;
+}
+
+/* Section de l'histoire des Jedi */
+section {
+    padding: 50px;
+    background-color: #0d0d0d;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    margin: 50px 20px;
+    text-align: justify;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+.Jedi_History h3,
+.Jedi_Story h3 {
+    color: #00fff0;
+    font-size: 2rem;
+    text-shadow: 0 0 10px rgba(0, 255, 240, 0.7);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.card_story {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+/* Sous-titres */
+.card_story h1 {
+    font-size: 1.5rem;
+    color: #00fff0;
+    text-shadow: 0 0 5px rgba(0, 255, 240, 0.6);
+    margin-top: 30px;
+}
+
+/* Pied de page */
+footer.end_page {
+    display: flex;
+    justify-content: center;
+    background-color: #0d0d0d;
+    padding: 20px;
+    border-top: 2px solid #333;
+}
+
+footer a {
+    margin: 0 15px;
+}
+
+.footer_logo {
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.footer_logo:hover {
+    transform: scale(1.1);
+}

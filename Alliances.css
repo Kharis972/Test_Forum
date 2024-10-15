@@ -1,0 +1,130 @@
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+}
+
+/* Banner container */
+.banner {
+    background-color: #000;
+    /* Background color */
+    padding: 5px 0;
+    text-align: center;
+    position: relative;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid #c7a200;
+    /* Golden border on top */
+    border-bottom: 2px solid #c7a200;
+    /* Golden border on bottom */
+}
+
+/* Left Section: Subscribe Button */
+.left-section {
+    flex: 1;
+    text-align: left;
+}
+
+.subscribe-button {
+    color: #c7a200;
+    font-weight: bold;
+    background-color: #1a1a1a;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 12px;
+    text-decoration: none;
+    border: 1px solid #c7a200;
+}
+
+.subscribe-button:hover {
+    background-color: #333;
+}
+
+/* Center Section: Logo */
+.center-section {
+    flex: 1;
+    text-align: center;
+}
+
+.center-section .logo {
+    max-width: 250px;
+    /* Adjust the logo size to match the image */
+}
+
+/* Right Section: Languages, Account, Play Free */
+.right-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.languages {
+    display: flex;
+    gap: 5px;
+}
+
+.lang {
+    color: #fff;
+    font-size: 12px;
+    text-decoration: none;
+    padding: 5px;
+    background-color: #333;
+    border-radius: 3px;
+}
+
+.lang:hover {
+    background-color: #c7a200;
+}
+
+.user-account,
+.play-free {
+    color: #c7a200;
+    font-weight: bold;
+    background-color: #1a1a1a;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 12px;
+    text-decoration: none;
+    border: 1px solid #c7a200;
+}
+
+.user-account:hover,
+.play-free:hover {
+    background-color: #333;
+}
+
+/* Pied de page */
+footer.end_page {
+    display: flex;
+    justify-content: center;
+    background-color: #0d0d0d;
+    padding: 20px;
+    border-top: 2px solid #333;
+}
+
+footer a {
+    margin: 0 15px;
+}
+
+.footer_logo {
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.footer_logo:hover {
+    transform: scale(1.1);
+}

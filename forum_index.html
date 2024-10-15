@@ -7,85 +7,103 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="forum_index.css">
+    <link rel="stylesheet" href="cssc1.css">
     <title>Binks Forum</title>
 </head>
 
 <body>
 
-<header role="banner">
+    <header role="banner">
+        <nav class="main-menu" role="navigation" aria-label="Menu principal">
+            <div class="cta">
+                
+                <!-- Icône du menu burger -->
+                <button class="burger-menu" onclick="toggleMenu()">☰</button>
+                
+                <ul class="menu-items">
+                    <li><a href="Jedi_History.html">History of the Jedi Order</a></li>
+                    <li><a href="#">Alliances</a></li>
+                    <li><a href="#">The ways of the Force</a></li>
+                    <li><a href="#">SWTOR</a></li>
+                    <li><a href="#">BATTLEFRONT</a></li>
+                    <li><a href="#">TRICKS</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="binks_logo"><img src="img/LogoSample_ByTailorBrands_no_bg.png" alt=""></div>
+            <div class="cta1">
+                <a href="#" class="user-account"><button>Create an account</button></a>
+            </div>
+        </nav>
+    </header>
 
-    <nav class="main-menu" role="navigation" aria-label="Menu principal">
-        <div class="cta">
-            <a href="#"><button>Menu</button></a>
-        </div>
-        <div class="binks_logo"><img src="img/LogoSample_ByTailorBrands_no_bg.png" alt=""></div>
-        <div class="cta1">
-            <a href="Jedi_Side.html"><button>Jedi Side</button></a>
-        </div>
-    </nav>
-
-</header>
+    <!-- Vidéo de fond -->
+    <div class="video-background">
+        <video autoplay loop muted id="background-video" width="1400" height="900">
+            <source src="img/STAR WARS™_ The Old Republic™ - 4K ULTRA HD – ‘Return’ Cinematic Trailer.mp4"
+                type="video/mp4">
+        </video>
+    </div>
 
     <div class="container">
-
         <div class="in">
-            
-            
-                <h1><strong>Welcome the Binks Forum</strong></h1>
-
-                    <p>This space has been created to share, discuss, have tips on Star Wars Univers, and games from this same Univers. I urge y'all 
-                        to be kind and respectful towards EVERYONE because misa will ban you !
-                    </p>
-                
-                <p class="title" aria-label="Welcome to the Binks Forum"></p>
-            
-            
-        </div>    
-
-        <div class="intro">
-        
-            <h1> Let's begin </h1>
-        
-            <p><strong>Choose your side</strong></p>
-        
+            <h1><strong>Welcome to the Binks Forum</strong></h1>
+            <p>This space has been created to share, discuss, and have tips on the Star Wars Universe, and games from
+                this same
+                Universe. I urge y'all to be kind and respectful towards EVERYONE,<br> otherwise, misa will ban you! &#128513;</p>
+            <p class="title" aria-label="Welcome to the Binks Forum"></p>
         </div>
 
-    </div>   
-
-
+        <div class="intro">
+            <h1>Let's begin</h1>
+            <p><strong>Choose your side</strong></p>
+        </div>
+    </div>
 
     <div class="container1">
-
         <h1 class="color1">Forum Star Wars</h1>
-
         <div class="forum">
-
             <div class="welcome" id="messages">
                 <p class="disappearText">Welcome on board dear fans</p>
             </div>
-
-           
-
             <form id="messageForm">
                 <input type="text" id="messageInput" placeholder="Tapez votre message..." required>
                 <button type="submit">Envoyer</button>
             </form>
-
         </div>
-
     </div>
-
-    
-
 
     <script src="forum_index.js"></script>
     <script src="serveur.js"></script>
+    <script>
+        const video = document.getElementById('background-video');
+        const muteButton = document.getElementById('muteButton');
+
+        // Initialiser la vidéo en mode muet
+        video.muted = true;
+
+        // Gérer l'activation/désactivation du son
+        muteButton.addEventListener('click', () => {
+            video.muted = !video.muted; // Alterne l'état muet
+            muteButton.textContent = video.muted ? 'Activer le son' : 'Désactiver le son'; // Change le texte du bouton
+        });
+    </script>
+
+    <script>
+            
+            function toggleMenu() {
+                    const nav = document.querySelector('nav');
+                    nav.classList.toggle('menu-open');
+                }
+
+
+</script>
 
     <footer class="end_page">
         <a href="Jedi_Side.html"><img src="img/logo-jedi-transparent.png" alt="" class="footer_logo"></a>
-        <a href="#"><img src="img/Logo.empire--transparent.png" alt="" class="footer_logo"></a>
-        <a href="#"><img src="img/logo-sénat-galactique-transparent.png" alt="" class="footer_logo"></a>
+        <a href="Sith-Side.html"><img src="img/Logo.empire--transparent.png" alt="" class="footer_logo"></a>
+        <a href=""><img src="img/logo-sénat-galactique-transparent.png" alt="" class="footer_logo"></a>
     </footer>
 
 </body>
